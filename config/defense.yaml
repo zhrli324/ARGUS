@@ -1,0 +1,2 @@
+weights: {"static": 0.2, "frequency": 0.2, "relevance": 0.6}
+similarity_threshold: 0.4

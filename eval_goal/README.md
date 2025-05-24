@@ -1,0 +1,1 @@
+This folder stores the misinformation goal inferred by ARGUS.

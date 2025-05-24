@@ -1,0 +1,1 @@
+This folder stores the logs generated during the operation of MAS.

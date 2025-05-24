@@ -1,0 +1,1 @@
+This folder stores the MT and TSR scores of each data run.
