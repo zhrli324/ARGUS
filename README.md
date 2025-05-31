@@ -6,6 +6,7 @@ Code for our paper `Goal-Aware Identification and Rectification of Misinformatio
 
 Clone this repo and create virtual env
 ```shell
+git clone https://github.com/zhrli324/ARGUS.git
 cd ARGUS
 conda create -n ARGUS python=3.9 -y
 conda activate ARGUS
