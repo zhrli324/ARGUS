@@ -199,25 +199,25 @@ class Simulator:
             for i in range(num_agents):
                 if i == 0:
                     self.agents[i].background.neighbors.append(i+1)
-                    topo_map.append({"agent_id": i, "neighbors": [i+1]})
+                    topo_map.append({"id": i, "neighborhood": [i+1]})
                     continue
                 if i == num_agents - 1:
                     self.agents[i].background.neighbors.append(i-1)
-                    topo_map.append({"agent_id": i, "neighbors": [i-1]})
+                    topo_map.append({"id": i, "neighborhood": [i-1]})
                     continue
                 self.agents[i].background.neighbors.append(i-1)
                 self.agents[i].background.neighbors.append(i+1)
-                topo_map.append({"agent_id": i, "neighbors": [i-1, i+1]})
+                topo_map.append({"id": i, "neighborhood": [i-1, i+1]})
             return topo_map
         elif self.topo == 'full':
             topo_map = []
             for i in range(num_agents):
-                topo_map.append({"agent_id": i, "neighbors": []})
+                topo_map.append({"id": i, "neighborhood": []})
                 for j in range(num_agents):
                     if i == j:
                         continue
                     self.agents[i].background.neighbors.append(j)
-                    topo_map[i]["neighbors"].append(j)
+                    topo_map[i]["neighborhood"].append(j)
             return topo_map
         else:
             raise ValueError(f"Unknown topology type: {self.topo}. Supported types are 'auto', 'chain', and 'full'.")
